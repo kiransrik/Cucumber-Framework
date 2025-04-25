@@ -32,12 +32,10 @@ jobs:
 
       - name: Run Behave tests with Playwright
         run: |
-          source venv/bin/activate
-          behave --format pretty --tags=~@skip
+                   
           mkdir -p reports
-          behave -f junit -o reports/output.xml  # JUnit format for CI
-          behave -f html -o reports/report.html  # Human readable report
-
+          behave --junit -o reports/output.xml  # JUnit format for CI
+          
       - name: Upload test reports
         uses: actions/upload-artifact@v3
         with:
