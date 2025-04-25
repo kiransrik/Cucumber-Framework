@@ -1,16 +1,16 @@
-from playwright.sync_api import sync_playwright, expect, Page
+from playwright.async_api import async_playwright, expect, Page
 from utils import config
 
 class NavigationPage:
     def __init__(self, page: Page):
         self.page = page  # Store the Playwright page object
     
-    def open_selenium_dropdown(self):
+    async def open_selenium_dropdown(self):
         selenium_button = self.page.locator("text=Selenium")
         expect(selenium_button).to_be_visible()
         selenium_button.click()
 
-    def navigate_selenium_dropdown(self):
+    async def navigate_selenium_dropdown(self):
         # Click the "Selenium" button to open the dropdown
         self.page.goto(config.BASE_URL)
         self.page.click("text=Selenium")
@@ -32,3 +32,5 @@ class NavigationPage:
             self.page.screenshot(path=f"screenshots/{item_text.lower().replace(' ', '_')}.png")
 
             self.page.click("text=Selenium")
+
+        
