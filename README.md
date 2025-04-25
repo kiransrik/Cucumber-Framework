@@ -14,6 +14,7 @@ behave
 
 ### View Test Results:
 - Screenshots are saved in the `screenshots/` folder.
+- Reports are same in the 'reports/' folder.
 
 ## 3. CI/CD Integration (GitHub Actions)
 
