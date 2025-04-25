@@ -5,7 +5,7 @@
 
 ### ✅ Prerequisites:
 - Node.js (v16+ recommended)
-- playwright install
+- pip install -r requirements.txt && playwright install
 - Git
 
 ## 2. Running Tests Locally
