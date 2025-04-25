@@ -1,0 +1,7 @@
+Feature: Navigate Selenium dropdown on Guru99 # features/navigation.feature:1
+
+  Scenario: User navigates through Selenium dropdown pages                                # features/navigation.feature:3
+    Given the user is on the homepage                                                     # features/steps/test_navigation_steps.py:6
+    When the user clicks the Selenium dropdown                                            # features/steps/test_navigation_steps.py:15
+    Then the user should be able to visit each Selenium subpage and see the correct title # features/steps/test_navigation_steps.py:20
+
